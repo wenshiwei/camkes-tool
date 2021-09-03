@@ -777,7 +777,7 @@ int run(void) {
   strncpy((char*)d1, hello, D1_READY_IDX - 1);
 
   d1_release(); // ensure the assignment below occurs after the strcpy above
-  ((*char)d1)[D1_READY_IDX] = 1;
+  ((char*)d1)[D1_READY_IDX] = 1;
 
   /* Wait for Pong to reply. We can assume d2_data is
    * zeroed on startup by seL4.
