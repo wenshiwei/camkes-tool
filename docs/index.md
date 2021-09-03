@@ -729,9 +729,6 @@ Now let's create an ADL description of the Ping component:
 
 ```camkes
 /* apps/hellodataport/components/Ping/Ping.camkes */
-
-import "Porttype.idl4";
-
 component Ping {
   include "porttype.h";
   control;
@@ -747,7 +744,6 @@ the `MyData_t` type. Add a similar description for Pong:
 ```camkes
 /* apps/hellodataport/components/Pong/Pong.camkes */
 
-import "Porttype.idl4";
 
 component Pong {
   include "porttype.h";
